@@ -6,15 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker": "docker-compose up --detach",
+    "shell": "docker exec -it db bash",
+    "stop": "docker kill $(docker ps -q)",
+    "prune": "docker kill $(docker ps -q) && docker system prune"
   },
   "dependencies": {
+    "mongodb": "^4.1.2",
+    "mongoose": "^6.0.9",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "autoprefixer": "^10.3.6",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "postcss": "^8.3.8",
+    "tailwindcss": "^2.2.16"
   }
 }
