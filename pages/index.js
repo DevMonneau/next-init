@@ -8,6 +8,7 @@ export default function Home({ result }) {
       </Head>
 
       <h1>lets build fb</h1>
+
       {JSON.stringify(result)}
     </div>
   );
